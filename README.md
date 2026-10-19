@@ -14,11 +14,12 @@ Per replicare o eseguire le analisi:
 
 ## 📂 Architettura e Organizzazione del Progetto
 
-tesi_tesi_completa/
+tesi/
 ├── .gitignore
 ├── README.md
-├── pipeline_psicometrica/              # <-- PRIMA PIPELINE (EFA / Psicometria)
-│   ├── data/                                  # <-- scaricare dal dataset
+├── requirements.txt
+├── pipeline_FA/                  <-- PRIMA PIPELINE (EFA / Psicometria)
+│   ├── data/                     <-- scaricare dal dataset OpenNeuro ds005237
 │   │   └── matrice_fenotipica_completa.csv
 │   ├── modules/
 │   │   ├── cleaning.py
@@ -30,19 +31,18 @@ tesi_tesi_completa/
 │   │   └── latex.py
 │   ├── output_pipeline/
 │   └── main.py
-│
-└── pipeline_fmri/                      # <-- SECONDA PIPELINE (sPLS / fMRI)
+└── pipeline_fmri/                <-- SECONDA PIPELINE (sPLS / fMRI)
     ├── data/
     │   ├── matrice_punteggi_fattoriali.csv (Copiato/collegato dalla pipeline 1)
-    │   ├── whole_brain_region_labels_ordered_Cerebellum_Seperate.npy   # <-- scaricare dal dataset
-    │   └── fMRI_timeseries_clean_denoised_GSR_parcellated/             # <-- scaricare dal dataset
+    │   ├── whole_brain_region_labels_ordered_Cerebellum_Seperate.npy   <-- scaricare dal dataset
+    │   └── fMRI_timeseries_clean_denoised_GSR_parcellated/             <-- scaricare dal dataset
     ├── modules/
     │   ├── network_mapping.py
     │   ├── spls_engine.py
     │   ├── edge_decoder.py
     │   ├── reporting_fmri.py
     │   └── plotting_fmri.py
-    ├── output_spls/                    
+    ├── output_spls/
     └── main_spls.py
 
 Il progetto è strutturato in due macro-ambienti di calcolo indipendenti:
