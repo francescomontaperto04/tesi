@@ -1,0 +1,20 @@
+# Python / IDE
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+.vscode/
+.idea/
+
+# Dati grezzi e file binari pesanti
+**/data/fMRI_timeseries_clean_denoised_GSR_parcellated/
+**/data/*.npy
+**/data/*.csv
+*.h5
+
+# Output e report generati dalle pipeline
+**/output_pipeline/
+**/output/
+**/reports/figures/
+*.pdf
