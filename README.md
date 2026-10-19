@@ -14,6 +14,7 @@ Per replicare o eseguire le analisi:
 
 ## 📂 Architettura e Organizzazione del Progetto
 
+```text
 tesi/
 ├── .gitignore
 ├── README.md
